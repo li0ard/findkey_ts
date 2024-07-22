@@ -18,8 +18,7 @@ interface formattedH {
 }
 
 interface Keys {
-    h: number[],
-    formattedH: formattedH
+    h: formattedH,
     mu: number,
     theta: number,
     residuals: number[][]
@@ -100,8 +99,8 @@ export const findKey = (fp0: string[], fp1: string[]): Keys => {
     }
 
     return {
-        h: h,
-        formattedH: {
+        //h: h,
+        h: {
             A0: h[2],
             A1: h[0],
             A2: h[1],
