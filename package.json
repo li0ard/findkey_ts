@@ -1,6 +1,6 @@
 {
   "name": "findkey_ts",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": "li0ard",
   "repository": {
     "type": "git",
@@ -15,15 +15,17 @@
     "typescript": "^5.0.0"
   },
   "bin": {
-    "findkey_ts": "./dist/index.js"
+    "findkey_ts": "./dist/cli.js"
   },
   "bugs": {
     "url": "https://github.com/li0ard/findkey_ts/issues"
   },
   "description": "Search for affine transformation parameters for coordinate systems",
   "files": [
+    "dist/cli.js",
     "dist/index.js",
     "dist/src/index.js",
+    "dist/src/cli.d.ts",
     "dist/src/index.d.ts",
     "dist/index.d.ts"
   ],

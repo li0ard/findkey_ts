@@ -24,6 +24,6 @@
       "noPropertyAccessFromIndexSignature": false,
       "outDir": "dist"
     },
-    "include": ["index.ts", "src/index.ts"],
+    "include": ["cli.ts", "index.ts", "src/index.ts"],
 }
   

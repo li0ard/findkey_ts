@@ -8,7 +8,7 @@ let x: number[] = new Array(2).fill(0),
     dy: number[] = new Array(2).fill(0),
     yh: number[] = new Array(2).fill(0)
 
-interface formattedH {
+export interface formattedH {
     A0: number,
     A1: number,
     A2: number,
@@ -17,7 +17,7 @@ interface formattedH {
     B2: number,
 }
 
-interface Keys {
+export interface Keys {
     h: formattedH,
     mu: number,
     theta: number,
@@ -25,9 +25,9 @@ interface Keys {
 }
 
 /**
- * Поиск параметров
- * @param fp0 Файл c координатами в исходной СК в формате "Y X"
- * @param fp1 Файл с координатами в нужной СК в формате "Y X"
+ * Find parameters
+ * @param fp0 Array with coordinates in original CS in the format "Y X"
+ * @param fp1 Array with coordinates in desired CS in the format "Y X"
  * @returns 
  */
 export const findKey = (fp0: string[], fp1: string[]): Keys => {
@@ -99,7 +99,6 @@ export const findKey = (fp0: string[], fp1: string[]): Keys => {
     }
 
     return {
-        //h: h,
         h: {
             A0: h[2],
             A1: h[0],
@@ -114,6 +113,11 @@ export const findKey = (fp0: string[], fp1: string[]): Keys => {
     }
 }
 
+/**
+ * Reverse parameters
+ * @param h Property `h` of `findKey` function result 
+ * @returns 
+ */
 export const reverseH = (h: formattedH): formattedH => {
     let D = h.A1 * h.B2 - h.A2 * h.B1
     return {
