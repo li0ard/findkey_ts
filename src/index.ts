@@ -8,6 +8,7 @@ let x: number[] = new Array(2).fill(0),
     dy: number[] = new Array(2).fill(0),
     yh: number[] = new Array(2).fill(0)
 
+/** Represents the formatted transformation parameters */
 export interface formattedH {
     A0: number,
     A1: number,
@@ -17,6 +18,7 @@ export interface formattedH {
     B2: number,
 }
 
+/** Represents the transformation parameters with scale (mu), angle (theta), and residuals */
 export interface Keys {
     h: formattedH,
     mu: number,

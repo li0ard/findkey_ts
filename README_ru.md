@@ -25,6 +25,24 @@ findkey_ts --f1 <coord1> --f2 <coord2>
 ## API
 
 ```ts
+/** Represents the formatted transformation parameters */
+export interface formattedH {
+    A0: number,
+    A1: number,
+    A2: number,
+    B0: number,
+    B1: number,
+    B2: number,
+}
+
+/** Represents the transformation parameters with scale (mu), angle (theta), and residuals */
+export interface Keys {
+    h: formattedH,
+    mu: number,
+    theta: number,
+    residuals: number[][]
+}
+
 /**
  * Find parameters
  * @param fp0 Array with coordinates in original CS in the format "Y X"
@@ -32,12 +50,12 @@ findkey_ts --f1 <coord1> --f2 <coord2>
  * @returns 
  */
 
-export const findKey = (fp0: string[], fp1: string[]) => {}
+export const findKey = (fp0: string[], fp1: string[]): Keys => {}
 
 /**
  * Reverse parameters
  * @param h Property `h` of `findKey` function result 
  * @returns 
  */
-export const reverseH = (h: formattedH) => {}
+export const reverseH = (h: formattedH): formattedH => {}
 ```
