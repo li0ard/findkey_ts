@@ -1,13 +1,19 @@
 {
   "name": "findkey_ts",
-  "version": "1.0.2",
+  "version": "1.0.3",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "author": "li0ard",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/li0ard/findkey_ts.git"
   },
-  "main": "dist/index.js",
-  "module": "src/index.ts",
+  "bugs": {
+    "url": "https://github.com/li0ard/findkey_ts/issues"
+  },
+  "homepage": "https://github.com/li0ard/findkey_ts#readme",
+  "description": "Search for affine transformation parameters for coordinate systems",
+  "type": "module",
   "devDependencies": {
     "@types/bun": "latest"
   },
@@ -17,10 +23,6 @@
   "bin": {
     "findkey_ts": "./dist/cli.js"
   },
-  "bugs": {
-    "url": "https://github.com/li0ard/findkey_ts/issues"
-  },
-  "description": "Search for affine transformation parameters for coordinate systems",
   "files": [
     "dist/cli.js",
     "dist/index.js",
@@ -29,11 +31,8 @@
     "dist/src/index.d.ts",
     "dist/index.d.ts"
   ],
-  "homepage": "https://github.com/li0ard/findkey_ts#readme",
   "scripts": {
     "build": "rm -rf dist && tsc --project tsconfig.build.json && tsc-alias --project tsconfig.build.json",
     "test": "bun run index.ts --f1 example/sk42.csv --f2 example/gsk2011.csv"
-  },
-  "type": "module",
-  "types": "dist/index.d.ts"
+  }
 }
