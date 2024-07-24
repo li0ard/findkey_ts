@@ -1,5 +1,5 @@
 {
-    "name": "@li0ard/findkey_ts",
+    "name": "@li0ard/findkey-ts",
     "version": "1.0.3",
     "exports": "./index.ts",
     "publish": {
