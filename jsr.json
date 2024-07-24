@@ -1,0 +1,8 @@
+{
+    "name": "@li0ard/findkey_ts",
+    "version": "1.0.3",
+    "exports": "./index.ts",
+    "publish": {
+        "exclude": ["example", "dist"]
+    }
+}
