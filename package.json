@@ -33,6 +33,7 @@
   ],
   "scripts": {
     "build": "rm -rf dist && tsc --project tsconfig.build.json && tsc-alias --project tsconfig.build.json",
-    "test": "bun run index.ts --f1 example/sk42.csv --f2 example/gsk2011.csv"
+    "test": "bun run index.ts --f1 example/sk42.csv --f2 example/gsk2011.csv",
+    "publish:jsr": "bunx jsr publish"
   }
 }
