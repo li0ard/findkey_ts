@@ -1,13 +1,3 @@
-let x: number[] = new Array(2).fill(0),
-    y: number[] = new Array(2).fill(0),
-    s: number[] = new Array(7).fill(0),
-    h: number[] = new Array(6).fill(0),
-    xc: number[] = new Array(2).fill(0),
-    yc: number[] = new Array(2).fill(0),
-    dx: number[] = new Array(2).fill(0),
-    dy: number[] = new Array(2).fill(0),
-    yh: number[] = new Array(2).fill(0)
-
 /** Represents the formatted transformation parameters */
 export interface formattedH {
     A0: number,
@@ -33,6 +23,15 @@ export interface Keys {
  * @returns 
  */
 export const findKey = (fp0: string[], fp1: string[]): Keys => {
+    let x: number[] = new Array(2).fill(0),
+        y: number[] = new Array(2).fill(0),
+        s: number[] = new Array(7).fill(0),
+        h: number[] = new Array(6).fill(0),
+        xc: number[] = new Array(2).fill(0),
+        yc: number[] = new Array(2).fill(0),
+        dx: number[] = new Array(2).fill(0),
+        dy: number[] = new Array(2).fill(0),
+        yh: number[] = new Array(2).fill(0);
     /* coordinate sums */
     for(let i = 0; i < fp0.length; i++) {
         x = fp0[i].split(" ").map(i => parseFloat(i))
